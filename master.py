@@ -15,6 +15,7 @@ def clear_terminal():
 
 def print_allah():
     art1 = [
+        "\n\n\n\n\n",
         f"{CGRN}--------------------###     ##        ##           ###     ##     ##   {CEND}{CYLW}##  ######## {CEND}{CBLU}  ##########  ##     ##  #######{CEND}",
         f"{CGRN}-------------------## ##    ##        ##          ## ##    ##     ##   {CEND}{CYLW}    ##       {CEND}{CBLU}      ##      ##     ##  ##     {CEND}",
         f"{CGRN}------------------##   ##   ##        ##         ##   ##   ##     ##   {CEND}{CYLW}##  ##       {CEND}{CBLU}      ##      ##     ##  ##     {CEND}",
