@@ -42,8 +42,22 @@ def print_allah():
         f"{CORG}     ##            ##        ##      ##     ##  ##      ##      ##      ##      ##{CEND}",
         f"{CORG}     ##      ########  ########      #######    ##      ##      ##      ##      ##{CEND}",
     ]
+
+    art3 = [
+        f"{CGRN} _______   _____    _____   _____           _______          {CEND}{CBLU}                _                        _   _             {CEND}",
+        f"{CGRN}|__   __| / ____|  / ____| |  __ \     /\  |__   __|  /\     {CEND}{CBLU}     /\        | |                      | | (_)            {CEND}", 
+        f"{CGRN}   | |   | (___   | (___   | |  | |   /  \    | |    /  \    {CEND}{CBLU}    /  \  _   _| |_ ___  _ __ ___   __ _| |_ _  ___  _ __  {CEND}",
+        f"{CGRN}   | |    \___ \   \___ \  | |  | |  / /\ \   | |   / /\ \   {CEND}{CBLU}   / /\ \| | | | __/ _ \| '_ ` _ \ / _` | __| |/ _ \| '_ \ {CEND}",
+        f"{CGRN}   | |    ____) |  ____) | | |__| | / ____ \  | |  / ____ \  {CEND}{CBLU}  / ____ \ |_| | || (_) | | | | | | (_| | |_| | (_) | | | |{CEND}",
+        f"{CGRN}   |_|   |_____/  |_____/  |_____/ /_/    \_\ |_| /_/    \_\ {CEND}{CBLU} /_/    \_\__,_|\__\___/|_| |_| |_|\__,_|\__|_|\___/|_| |_|{CEND}"
+    ] 
+
     clear_terminal()
     for line in art2:
+        padding = (t_width - len(line)) // 2
+        print(" " * padding + line)
+
+    for line in art3:
         padding = (t_width - len(line)) // 2
         print(" " * padding + line)
 
