@@ -1,3 +1,4 @@
+import os
 
 CRED = '\033[91m'
 CEND = '\033[0m'
@@ -7,44 +8,52 @@ CYLW = '\033[93m'
 CMGT = '\033[35m'
 CORG = '\033[38;5;208m'
 
+t_width = os.get_terminal_size().columns
+def clear_terminal():
+    # Clear the terminal screen
+    os.system('cls' if os.name == 'nt' else 'clear')
+
 def print_allah():
     art1 = [
-        f"\n\n\n{CGRN}    ###    ##       ##          ###    ##     ##   {CEND}{CYLW}##  ######## {CEND}{CBLU}   ##########  ##     ##  #######{CEND}",
-        f"{CGRN}   ## ##   ##       ##         ## ##   ##     ##   {CEND}{CYLW}    ##       {CEND}{CBLU}       ##      ##     ##  ##     {CEND}",
-        f"{CGRN}  ##   ##  ##       ##        ##   ##  ##     ##   {CEND}{CYLW}##  ##       {CEND}{CBLU}       ##      ##     ##  ##     {CEND}",
-        f"{CGRN} ######### ##       ##       ######### #########   {CEND}{CYLW}##  ######## {CEND}{CBLU}       ##      #########  #######{CEND}",
-        f"{CGRN} ##     ## ##       ##       ##     ## ##     ##   {CEND}{CYLW}##        ## {CEND}{CBLU}       ##      ##     ##  ##     {CEND}",
-        f"{CGRN} ##     ## ##       ##       ##     ## ##     ##   {CEND}{CYLW}##        ## {CEND}{CBLU}       ##      ##     ##  ##     {CEND}",
-        f"{CGRN} ##     ## ######## ######## ##     ## ##     ##   {CEND}{CYLW}##  ######## {CEND}{CBLU}       ##      ##     ##  #######{CEND}",
+        f"{CGRN}--------------------###     ##        ##           ###     ##     ##   {CEND}{CYLW}##  ######## {CEND}{CBLU}  ##########  ##     ##  #######{CEND}",
+        f"{CGRN}-------------------## ##    ##        ##          ## ##    ##     ##   {CEND}{CYLW}    ##       {CEND}{CBLU}      ##      ##     ##  ##     {CEND}",
+        f"{CGRN}------------------##   ##   ##        ##         ##   ##   ##     ##   {CEND}{CYLW}##  ##       {CEND}{CBLU}      ##      ##     ##  ##     {CEND}",
+        f"{CGRN}-----------------#########  ##        ##        #########  #########   {CEND}{CYLW}##  ######## {CEND}{CBLU}      ##      #########  #######{CEND}",
+        f"{CGRN}-----------------##     ##  ##        ##        ##     ##  ##     ##   {CEND}{CYLW}##        ## {CEND}{CBLU}      ##      ##     ##  ##     {CEND}",
+        f"{CGRN}-----------------##     ##  ##        ##        ##     ##  ##     ##   {CEND}{CYLW}##        ## {CEND}{CBLU}      ##      ##     ##  ##     {CEND}",
+        f"{CGRN}-----------------##     ##  ########  ########  ##     ##  ##     ##   {CEND}{CYLW}##  ######## {CEND}{CBLU}      ##      ##     ##  #######{CEND}",
         "",
-        f"{CRED}      #######    ########   #########     ###     ##########  #########  ########  ##########{CEND}",
-        f"{CRED}     ##     ##   ##     ##  ##           ##  ##       ##      ##         ##            ##    {CEND}",
-        f"{CRED}     ##          ##     ##  ##          ##    ##      ##      ##         ##            ##    {CEND}",
-        f"{CRED}     ##   ####   ########   ########   ##########     ##      ########   ########      ##    {CEND}",
-        f"{CRED}     ##     ##   ##   ##    ##         ##      ##     ##      ##               ##      ##    {CEND}",
-        f"{CRED}     ##     ##   ##    ##   ##         ##      ##     ##      ##               ##      ##    {CEND}",
-        f"{CRED}      #######    ##     ##  #########  ##      ##     ##      #########  ########      ##    {CEND}\n\n\n",
+        f"{CRED}  #######    ########   #########     ###     ##########  #########  ########  ##########{CEND}",
+        f"{CRED} ##     ##   ##     ##  ##           ##  ##       ##      ##         ##            ##    {CEND}",
+        f"{CRED} ##          ##     ##  ##          ##    ##      ##      ##         ##            ##    {CEND}",
+        f"{CRED} ##   ####   ########   ########   ##########     ##      ########   ########      ##    {CEND}",
+        f"{CRED} ##     ##   ##   ##    ##         ##      ##     ##      ##               ##      ##    {CEND}",
+        f"{CRED} ##     ##   ##    ##   ##         ##      ##     ##      ##               ##      ##    {CEND}",
+        f"{CRED}  #######    ##     ##  #########  ##      ##     ##      #########  ########      ##    {CEND}",
     ]
 
     art2 = [
-           f" \n\n\n{CORG} ##########  ########  ########      #######       ###      ##########     ###{CEND}",
-           f" {CORG}    ##      ##        ##            ##     ##    ##  ##        ##        ##  ##{CEND}",
-           f" {CORG}    ##      ##        ##            ##     ##   ##    ##       ##       ##    ##{CEND}", 
-           f" {CORG}    ##      ########  ########      ##     ##  ##########      ##      ##########{CEND}",
-           f" {CORG}    ##            ##        ##      ##     ##  ##      ##      ##      ##      ##{CEND}",
-           f" {CORG}    ##            ##        ##      ##     ##  ##      ##      ##      ##      ##{CEND}",
-           f" {CORG}    ##      ########  ########      #######    ##      ##      ##      ##      ##{CEND}\n\n\n",
+        f"{CORG} ##########  ########  ########      #######       ###      ##########     ###{CEND}    ",
+        f"{CORG}     ##      ##        ##            ##     ##    ##  ##        ##        ##  ##{CEND}  ",
+        f"{CORG}     ##      ##        ##            ##     ##   ##    ##       ##       ##    ##{CEND} ", 
+        f"{CORG}     ##      ########  ########      ##     ##  ##########      ##      ##########{CEND}",
+        f"{CORG}     ##            ##        ##      ##     ##  ##      ##      ##      ##      ##{CEND}",
+        f"{CORG}     ##            ##        ##      ##     ##  ##      ##      ##      ##      ##{CEND}",
+        f"{CORG}     ##      ########  ########      #######    ##      ##      ##      ##      ##{CEND}",
     ]
-
+    clear_terminal()
     for line in art2:
-        print(line)
+        padding = (t_width - len(line)) // 2
+        print(" " * padding + line)
 
     print("\n\n                     Alsalamu Alaikum Wa Rahmatu Allah\n\n")
     while True:
         x = input("What is the first pillar of Islam: ")
         if x.lower() == "shahada":
+            clear_terminal()
             for line in art1:
-                print(line)
+                padding = (t_width - len(line)) // 2
+                print(" " * padding + line)
             break
         else:
             continue
