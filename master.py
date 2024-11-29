@@ -64,7 +64,7 @@ def print_allah():
     print("\n\n                     Alsalamu Alaikum Wa Rahmatu Allah\n\n")
     while True:
         x = input("What is the first pillar of Islam: ")
-        if x.lower() == "shahada":
+        if x.lower() == "shahada" or x.lower() == "alshahada" or x.lower() == "al shahada":
             clear_terminal()
             for line in art1:
                 padding = (t_width - len(line)) // 2
