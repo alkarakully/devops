@@ -8,7 +8,7 @@ CYLW = '\033[93m'
 CMGT = '\033[35m'
 CORG = '\033[38;5;208m'
 
-print("First Github Action Try")
+print("Second Github Action Try")
 t_width = os.get_terminal_size().columns
 def clear_terminal():
     # Clear the terminal screen
