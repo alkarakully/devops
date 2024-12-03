@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: tssdata-web01
-        image: alkarakully/tssdata-django:v1.1
+        image: alkarakully/tssdata-django:v2.0
         ports:
         - containerPort: 8000
