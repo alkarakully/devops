@@ -3,9 +3,14 @@ FROM python:latest
 # Install git to clone the repository
 RUN apt update && apt install -y git
 
+RUN pip install Django 
+
 # Clone the repository directly from GitHub
-RUN git clone https://github.com/alkarakully/devops.git
 
-WORKDIR /devops
+WORKDIR /tssdata
 
-CMD [ "python3", "master.py" ]
+COPY . .
+
+EXPOSE 8000
+
+CMD [ "python", "manage.py", "runserver", "0.0.0.0:8000" ]
