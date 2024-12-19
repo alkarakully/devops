@@ -5,8 +5,13 @@ from django.template import loader
 
 # Create your views here.
 
+def home(request):
+    hostname = socket.gethostname()
+    hosts = {"hostname": hostname}
+    template = loader.get_template("index.html")
+    return HttpResponse(template.render(hosts))
 
-def get_hostname(request):
+def members(request):
     hostname = socket.gethostname()
     hosts = {"hostname": hostname}
     template = loader.get_template("index.html")

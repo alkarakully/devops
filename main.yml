@@ -8,7 +8,7 @@ spec:
   selector:
     matchLabels:
       app: tssdata01
-  replicas: 2
+  replicas: 6
   template:
     metadata:
       labels:
