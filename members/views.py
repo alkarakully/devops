@@ -7,14 +7,16 @@ from django.template import loader
 
 def home(request):
     hostname = socket.gethostname()
-    custome_header = os.environ.get("custom_header")
+    with open("/opt/custom_header", "r") as header:
+        custome_header = header.readlines()[0]
     hosts = {"hostname": hostname, "custom_header": custome_header}
     template = loader.get_template("index.html")
     return HttpResponse(template.render(hosts))
 
 def members(request):
     hostname = socket.gethostname()
-    custome_header = os.environ("custom_header")
+    with open("/opt/custom_header", "r") as header:
+        custome_header = header.readlines()[0]
     hosts = {"hostname": hostname, "custom_header": custome_header}
     template = loader.get_template("index.html")
     return HttpResponse(template.render(hosts))
