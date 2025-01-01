@@ -33,4 +33,4 @@ jobs:
       # Step 5: Push the Docker image to Docker Hub
       - name: Push Docker image
         run: |
-          docker push alkarakully/tssdata-django:v12.0
+          docker push alkarakully/tssdata-django-all-platforms:v01.0
